@@ -6,9 +6,9 @@ It leverages known vulnerabilities, default credentials and documented features 
 Why making Ginger?
 ----
 
-During a penetration testing for a client I accidentally stumbled upon the web interface of [Pentaho Business Intelligence server](https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/) which although old is still widely used. A [Google search](https://www.google.com/search?q=pentaho+hacking) for any previous security work on this software was... well, disappointing: no report of a serious assessment of the platform.
+During a penetration testing for a client we accidentally stumbled upon the web interface of [Pentaho Business Intelligence server](https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/) which although old is still widely used. A [Google search](https://www.google.com/search?q=pentaho+hacking) for any previous security work on this software was... well, disappointing: no report of a serious assessment of the platform.
 
-Beginning an analysis on my own is quickly become clear that an enourmous attack surface was exposed, questionable security implementations in place and all of that combined with something miracously passed under the radar till now. As the attack surface expanded, it became clear that a single small script would not have cut it: ginger was born.
+Beginning an analysis on our own quickly became clear that an enourmous attack surface was exposed, questionable security implementations in place and all of that combined with something miracously passed under the radar till now. As the attack surface expanded, it was also clear that a single small script would not have cut it: ginger was born.
 
 Usage
 ----
