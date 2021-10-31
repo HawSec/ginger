@@ -1,19 +1,12 @@
 # Ginger
 
-Ginger is an open source penetration testing tool that ease the process of assessing the security of a given **[Pentaho](https://www.hitachivantara.com/en-us/products/data-management-analytics/pentaho.html)** installation.
-It leverages known vulnerabilities, default credentials and documented features to allow extraction of sensitive data and server takeover.
+Ginger is an open source security assessment tool that helps in assessing the security of a given **[Pentaho BA](https://www.hitachivantara.com/en-us/products/data-management-analytics/pentaho.html)** application instance.
 
-Why making Ginger?
-----
+Please keep in mind that this project is still a work in progress, and not all features might be present or work as intended.
 
-During a penetration testing for a client we accidentally stumbled upon the web interface of [Pentaho Business Intelligence server](https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/) which although old is still widely used. A [Google search](https://www.google.com/search?q=pentaho+hacking) for any previous security work on this software was... well, disappointing: no report of a serious assessment of the platform.
+## Usage
 
-Beginning an analysis on our own quickly became clear that an enourmous attack surface was exposed, questionable security implementations in place and all of that combined with something miracously passed under the radar till now. As the attack surface expanded, it was also clear that a single small script would not have cut it: ginger was born.
-
-Usage
-----
-
-Ginger got just one mandatory parameter, the URL of the target Pentaho installation:
+Ginger has only one mandatory parameter, the URL of the target Pentaho installation:
 
 ```console
 user@host:~$ python gynger.py http://localhost:8080/pentaho
@@ -21,13 +14,14 @@ user@host:~$ python gynger.py http://localhost:8080/pentaho
 
 **Note: do not include a trailing slash (/)**
 
-Doing that will start ginger in Anonymous mode, with limited funcionality. If valid credentials are known, those should be provided:
+Doing that will start Ginger in Anonymous mode, with limited funcionality. If valid credentials are known, those should be provided:
 
 ```console
 user@host:~$ python gynger.py http://localhost:8080/pentaho -u admin -p password
 ```
 
-When the scripted ended the preliminary connection phase, it will prompt and wait for commands. The complete list of available commands can be seen by typing `help`.
+When Ginger establishes a connection with Pentaho BA, it will prompt and wait for commands.
+The complete list of available commands can be seen by typing `help`.
 
 Command | Reference
 --- | ---
@@ -38,3 +32,9 @@ usernames | list all valid usernames
 userroles | list all valid usernames and valid roles
 shell | upload a reverse shell
 version | show Pentaho Version
+
+# Warning!
+
+Ginger comes with absolutely NO WARRANTY,
+and shall not be used at any system where prior approval has not been granted.
+Use at your own risk.
